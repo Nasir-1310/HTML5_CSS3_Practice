@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animation</title>
+
+    <style>
+        .stage{
+            height: 300px;
+            width: 100%;
+            background-color: black;
+
+
+        }
+        .ball{
+            height: 100px;
+            width: 100px;
+            border-radius: 50%;
+            background-color: rgb(160, 151, 67);
+            position: absolute;
+
+        }
+
+        .stage:hover .ball{
+            animation: sliding 3s ease-in-out .5s infinite alternate;
+        }
+
+        @keyframes sliding {
+    0% {
+        left: 0;
+        top: 0;
+
+    }
+    50% {
+        left: calc(50% - 50px); /* Move halfway to the right */
+        top: 205px; /* Ball bounces to 200px from the top */
+        background-color: rebeccapurple;
+    }
+    100% {
+        left: calc(100% - 100px); /* Move to the right edge */
+        top: 0;
+        background-color:red;
+    }
+}
+
+    </style>
+</head>
+<body>
+
+    <div class="stage">
+        <div class="ball"></div>
+    </div>
+    
+</body>
+</html>
